@@ -1,140 +1,41 @@
 # TCC - Fechamento do curso
    ## Desenvolvimento de solução tecnológica
 
+# Sistema para Conscientização e Descarte Correto de Alimentos
+
+   ### 📝 Resumo da Ideia
+
+   **Resumo:**  
+   Esta plataforma visa unir diferentes atores da cadeia alimentar, promovendo o consumo consciente e o reaproveitamento, tornando o combate ao desperdício de alimentos mais colaborativo e eficiente.
+
+    🍎🤝👨‍🌾🌱
+
+   Este projeto é um sistema que conecta três principais perfis: quem compra (e pode desperdiçar), quem vende (e descarta grandes volumes) e quem recebe (através de doações ou aproveitamento de restos). O objetivo é criar um ciclo de **conscientização, reaproveitamento** e **redução do desperdício de alimentos**.
+
    ### Problema a ser trabalhado 
-   Responsible production and green consumption
+   Produção responsável e consumo verde
    
-   G&R é uma solução de aplicativo móvel para todos: agricultores, comerciantes ou a população em geral. O objetivo é criar uma ferramenta que possibilite a correspondência entre alimento e quem precisa dele, seja para consumo próprio, para ração animal ou para fertilizantes. Com isso, conseguimos reduzir o desperdício de alimentos e, consequentemente, a emissão de dióxido de carbono.
+   Esta plataforma é uma solução para todos: agricultores, comerciantes ou a população em geral. O objetivo é criar uma ferramenta que possibilite a correspondência entre alimento e quem precisa dele, seja para consumo próprio, para ração animal ou para fertilizantes. Com isso, conseguimos reduzir o desperdício de alimentos e, consequentemente, a emissão de dióxido de carbono.
 
    ### O que será desenvolvido?
-   Utilizando tecnologia de ponta para classificar alimentos por meio de imagens e identificar potenciais usuários interessados nos alimentos, conseguiremos reduzir o desperdício. Em um único aplicativo, o usuário pode doar, pedir alimentos e ver suas estatísticas de desperdício e sustentabilidade.
+   O sistema visa classificar alimentos por meio de imagens e data de validade e identificar potenciais usuários interessados nos alimentos. Em um único aplicativo, o usuário pode doar, pedir doação de alimentos e ver suas estatísticas de desperdício e sustentabilidade.
 
 ![Logo](/images/logo.png)
 
 
 ### Contents:
 
-- [Short Description](#Short-Description)
-- [Long Description](#Long-Description)
-- [Video](#video)
+- [Descrição](#Descrição)
+- [Long Description](#Descrição-detalhada)
 - [App](#app)
-- [Screens Prototype](#Screens-Prototype)
-- [Architecture](#architecture)
-- [Technology](#technology)
-- [Timeline](#timeline)
-- [Project Roadmap](#Project-Roadmap)
-
-### Team Project Name
-
-Give & Receive  
+- [Protótipo](#Protótipo)
+- [Arquitetura](#Arquitetura)
+- [Tecnologia](#Tecnologia)
 
 
-### Project Theme
+### 🎯  Objetivo
 
-Responsible production and green consumption
-
-
-
-### Short Description
-
-Solve food waste problem and encourage conscious consumption.
-
-### Long Description
-
-#### The Problem
-To Have Environmental responsibility is around applying innovation in your business.
-With that in mind, our purpose will be decreasing the waste, pollution and emission of gases as a result of improperly discarded food.
-
-
-#### Description 
-Our application aims to solve these problems in relation to Responsible production and green consumption, avoiding the possible accumulation of waste or gases emission by the same. Filling the gap between the farmers and donors, who wish to correctly dispose of these foods ,and the people who may require and use this food for some purpose, from self-consumption to fertilizer. This application will also provide statistics on how much food has been saved.
-
-
-#### Database
-Some data that we count as important topics around this theme: 
--30% of all food in the world is wasted - ONU
--45% of all the fruits and vegetables that grow are missed - ONU
--Food waste is responsible for 8% of the gases emissions that trigger the greenhouse effect - ONU
-
-
-#### What we are building
-We implemented the app in flutter as it is a very versatile language and allows using the same code for an iOS, Android and Web app. So if it is necessary, we can easily scale the application.
-We plan to use machine learning model in two ways:
--With Watson Visual Recognition and Watson Studio the application can classify images in consumption, animal food and fertilizer. Facilitating the user experience and improving the accuracy of the solution.
--With Watson Machine Learning the application can predict potential people interested in the food, enabling the increase of matches and the reduction of waste. 
-
-
-In order to scale the application, we thought about deploying it on the IBM Cloud and using Cloud Object Storage to store the data.
-
-
-#### How to use the APP
-You must first create your account to access our features and all the informations about the proccess.
-In the main menu, our app will present some information about issues related to waste, encouraging you to the sustainable movement.
-We have 2 possibilities, you can look for donated food at collection points near your region, assuming green consumption.
-On the other hand, you can also provide donations by registering your food in the app, may be the food left over from your harvest or considered unsuitable for sale, so will be reducing your waste levels.
-
-
-#### Why it matters
-It is our social responsibility to take steps not only to check all types of waste, but also to protect natural resources. This can be done through innovative approaches and initiatives with a higher purpose.
-
-### Video
-[![video](/images/video.png)](https://ibm.box.com/s/nfwyb44k9jryjq4s4kcj4p0oip5q1dy0)
-
-
-### App
-
-You can simulate using the app by clicking the link below. As at first we developed it to be a mobile app, we've restricted the screen size to simulate how it works on a cell phone. The app isn't complete yet, but it's a great way to experience and feel what it would be like in the future.  
-
-You have two options to access the app: you can click on Sign In and create your own access credentials, or you can use the example that we have previously registered: 
-
-email: john@mail.com and password: 123@abc
-
-By logging in, you can now add food, order food, see your latest orders and see your statistics.
-
-[Click here to open the app](https://ju-morroni.github.io/#/) 
-
-### Screens Prototype
-
-The images below show the prototypes of the next screens to be implemented. 
-
-![screens1](/images/telas5.png)
-![screens2](/images/telas2.png)
-![screens3](/images/telas3.png)
-
-
-
-### Architecture
-![Architecture](/images/architecture.png)
-
-1) User access the mobile app
-2) Upload a photo to phone and add a food
-3) NodeRed receive the data and send it to private cloud
-4) The image is sent to a model created with Visual Recognition and Watson Studio to be classified into consumption, animal feed and fertilizer. Then, data will be stored in Cloud Object Storage. 
-5) The Machine Learning model will predict a potential interest in the food and send the notification to contribute to the match. 
-### Technology
-
-We implemented the app in flutter as it is a very versatile language and allows using the same code for an iOS, Android and Web app. So if it is necessary, we can easily scale the application.
-We plan to use machine learning model in two ways:
--With Watson Visual Recognition and Watson Studio the application can classify images in consumption, animal food and fertilizer. Facilitating the user experience and improving the accuracy of the solution.
--With Watson Machine Learning the application can predict potential people interested in the food, enabling the increase of matches and the reduction of waste. 
-
-
-### Timeline
-![Logo](/images/timeline.png)
-
-### Project Roadmap 
-![Roadmap](/images/roadmap-n.png)
-![Roadmap](/images/next.png)
-
-# Sistema para Conscientização e Descarte Correto de Alimentos
-
-## 📝 Resumo da Ideia
-
-Este projeto é um sistema que conecta três principais perfis: quem compra (e pode desperdiçar), quem vende (e descarta grandes volumes) e quem recebe (através de doações ou aproveitamento de restos). O objetivo é criar um ciclo de **conscientização, reaproveitamento** e **redução do desperdício de alimentos**.
-
----
-
-## 🎯 Objetivo
+ Produção responsável e consumo verde.
 
 - **Geral:**  
   Criar uma plataforma que incentive e facilite o descarte correto e a doação de alimentos, reduzindo o desperdício.
@@ -144,25 +45,102 @@ Este projeto é um sistema que conecta três principais perfis: quem compra (e p
   - Oferecer aos vendedores uma forma de cadastrar excedentes.
   - Conectar excedentes a pessoas ou empresas que possam reaproveitar esses alimentos.
 
----
 
-## 👥 Personas
+### Descrição
 
-- **Comprador:**  
-  Busca dicas de consumo responsável, alertas de validade e opções para doar pequenos volumes de alimentos.
+Resolver o problema do desperdício de alimentos e incentivar o consumo consciente.
 
-- **Vendedor:**  
-  Necessita cadastrar alimentos prestes a vencer, ofertando doações ou descontos para evitar o descarte.
+### Descrição detalhada
 
-- **Receptor:**  
-  Recebe notificações sobre alimentos disponíveis e pode buscar ou agendar a coleta de doações.
+  #### O Problema
+  Ter responsabilidade ambiental significa aplicar inovação em seus negócios. Com isso em mente, este projeto tem o propósito de diminuir o desperdício, a poluição e a emissão de gases decorrentes do descarte inadequado de alimentos.
 
----
 
-> **Resumo:**  
-Esta plataforma visa unir diferentes atores da cadeia alimentar, promovendo o consumo consciente e o reaproveitamento, tornando o combate ao desperdício de alimentos mais colaborativo e eficiente.
+  #### Descrição
+  O sistema visa solucionar esses problemas relacionados à produção responsável e ao consumo sustentável, evitando o possível acúmulo de resíduos ou a emissão de gases pelos mesmos. Preenchendo a lacuna entre agricultores e doadores, que desejam descartar corretamente esses alimentos, e pessoas que podem precisar e utilizá-los para alguma finalidade, desde o autoconsumo até a fertilização. Estesistema também fornecerá estatísticas sobre a quantidade de alimentos economizada e/ou desperdiçada. 
 
-🍎🤝👨‍🌾🌱
+
+  #### Database
+  Alguns dados para considerar sobre este tema:
+  - 30% de todos os alimentos do mundo são desperdiçados - ONU
+  - 45% de todas as frutas e vegetais cultivados são desperdiçados - ONU
+  - O desperdício de alimentos é responsável por 8% das emissões de gases que desencadeiam o efeito estufa - ONU
+
+
+  #### O que está sendo desenvolvido?
+  Está sendo implementada uma aplicação com tais tecnologias:
+  Frontend: React
+  Backend: Node.js
+  DB: PostgreSQL
+  Infra: Docker + CI/CD
+  Serviços: geolocalização (mapa de doações próximas) 
+
+  Foi priorizada uma linguagem muito versátil e que permite o uso do mesmo código para aplicativos iOS, Android e Web. Assim, se necessário, pode ser escalado facilmente.
+
+
+  #### Como usar?
+  Primeiro, é preciso criar uma conta para acessar os recursos e todas as informações sobre o processo.
+
+  No menu principal, o aplicativo apresentará algumas informações sobre questões relacionadas ao desperdício, incentivando o usuário a aderir ao movimento sustentável.
+
+  No perfil será demonstrado pontos de coleta mais próximos a região cadastrada com possíveis alimentos a serem retirados ou pontos de coleta para doações. Como o cenário apresenta diferentes modalidades, foi necessário identificar personas para cada tipo de usuário para facilitar o processo. São elas:
+
+      ##### 👥 Personas
+
+      - **Consumidor:**  
+      Busca dicas de consumo responsável e opções para doar pequenos volumes de alimentos.
+
+      - **Comerciante:**  
+      Necessita cadastrar alimentos prestes a vencer, ofertando doações para evitar o descarte.
+
+      - **Receptor:**  
+      Recebe notificações sobre alimentos disponíveis e pode buscar ou agendar a coleta de doações.
+
+
+  #### Porque é importante?
+  É responsabilidade social tomar medidas não apenas para controlar todos os tipos de resíduos, mas também para proteger os recursos naturais. Isso pode ser feito por meio de abordagens e iniciativas inovadoras com um propósito maior.
+
+
+
+### App
+
+Para simular o uso do aplicativo clique no link abaixo. Inicialmente o intuito era ser um aplicativo móvel, porém diante algumas dificuldades e pouco conhecimento em linguagens para IOS e Android, foi restringido o desenvolvimento para uma aplicação web como foi ensinado durante todo o curso. O projeto em sim foi desenvolvido em javascript e html.
+
+Contudo, no protótipo o tamanho da tela será redimencionado para simular o funcionamento em um celular. O aplicativo ainda não está completo, mas é uma ótima maneira de experimentar e sentir como será no futuro.
+
+Você tem duas opções para acessar o aplicativo: clicar em Entrar e criar suas próprias credenciais de acesso ou usar o exemplo:
+
+e-mail: alex@mail.com e senha: 123@abc
+
+Ao fazer login, agora você pode adicionar alimentos, fazer pedidos, ver seus pedidos mais recentes e suas estatísticas.
+
+[Clique aqui para abrir o aplicativo em web](https://ju-morroni.github.io/#/) 
+
+### Protótipo
+
+As imagens abaixo mostram os protótipos das telas e suas funcionalidades:
+
+![screens1](/images/telas5.png)
+![screens2](/images/telas2.png)
+![screens3](/images/telas3.png)
+
+
+
+### Arquitetura
+![Architecture](/images/architecture.png)
+
+1) O usuário acessa o aplicativo móvel
+2) Carrega uma foto no celular e adiciona um alimento
+3) O NodeRed recebe os dados e os envia para uma nuvem privada
+4) A imagem é enviada para um modelo criado com Reconhecimento Visual e Watson Studio para ser classificada em consumo, ração animal e fertilizante. Em seguida, os dados serão armazenados no Cloud Object Storage.
+5) O modelo de Aprendizado de Máquina preverá um potencial interesse no alimento e enviará a notificação para contribuir com a correspondência.
+
+### Tecnologia
+
+Implementamos o sistema em javascript, html e css, pois é uma linguagem muito versátil e permite o uso do mesmo código para aplicativos iOS, Android e Web. Assim, se necessário, podemos escalar o aplicativo facilmente.
+Planejamos usar o modelo de aprendizado de máquina de duas maneiras:
+- Com o Watson Visual Recognition e o Watson Studio, o aplicativo pode classificar imagens em consumo, ração animal e fertilizantes. Facilitando a experiência do usuário e melhorando a precisão da solução.
+- Com o Watson Machine Learning, o aplicativo pode prever potenciais interessados ​​no alimento, permitindo o aumento de correspondências e a redução do desperdício.
 
 
 
