@@ -3,6 +3,10 @@ const express = require('express');
 const port = process.env.PORT || 3001
 const app = express()
 
+app.get('/', (re, res) => {
+  console.log('new feature')
+})
+
 app.listen(port, () => {
   console.log('start listening ${port}')
 })
