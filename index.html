@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TCC • Anti-Desperdício – Frontend (JS + CSS) PT-BR</title>
+  <meta name="description" content="Template vanilla JS + CSS em português para consumir a API Anti-Desperdício (OpenAPI)." />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="nav" role="navigation" aria-label="Navegação principal">
+    <div class="nav-inner">
+      <div class="brand"><span class="logo" aria-hidden="true"></span> Anti-Desperdício <span class="muted small">(template)</span></div>
+      <nav class="row" style="gap:6px">
+        <a href="#/home" id="lnk-home">Início</a>
+        <a href="#/lots" id="lnk-lots">Lotes</a>
+        <a href="#/pantry" id="lnk-pantry">Despensa</a>
+        <a href="#/vendor" id="lnk-vendor">Vendedor</a>
+      </nav>
+      <div class="spacer"></div>
+      <div class="pill small" id="env-pill" title="Base URL da API">API: <span id="baseUrlText">http://localhost:4010</span></div>
+      <button class="btn" id="btn-settings" aria-haspopup="dialog" aria-controls="dlg-settings" title="Configurações (tecle g)" style="margin-left:8px">⚙️</button>
+      <button class="btn primary" id="btn-login">Entrar</button>
+      <button class="btn" id="btn-logout" style="display:none">Sair</button>
+    </div>
+  </header>
+
+  <main class="container" id="app" tabindex="-1"></main>
+
+  <!-- Diálogo de configurações -->
+  <dialog id="dlg-settings" aria-label="Configurações de ambiente" style="border:none;border-radius:14px;padding:0;background:transparent">
+    <form method="dialog" class="card" style="min-width: min(92vw, 720px)">
+      <h2 style="margin:0 0 12px">Configurações</h2>
+      <div class="grid cols-2">
+        <div>
+          <label for="baseUrl">Base URL da API</label>
+          <input id="baseUrl" placeholder="http://localhost:4010" />
+          <p class="muted small">Use <span class="kbd">http://localhost:4010</span> para o <b>mock Prism</b> ou <span class="kbd">http://localhost:3000</span> para o backend real.</p>
+        </div>
+        <div>
+          <label for="accessToken">Token de acesso (JWT)</label>
+          <input id="accessToken" placeholder="preencher após /auth/login" />
+          <p class="muted small">Gravado localmente (<code>localStorage</code>).</p>
+        </div>
+      </div>
+      <div class="row right" style="margin-top:10px">
+        <button class="btn" value="cancel">Cancelar</button>
+        <button class="btn primary" value="ok">Salvar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div class="toast" aria-live="polite" aria-atomic="true" id="toast"></div>
+
+  <template id="tpl-lot-card">
+    <div class="card lot" role="article" aria-label="Lote de doação ou desconto">
+      <div class="row" style="justify-content:space-between;gap:8px">
+        <h3 style="margin:0" class="title"></h3>
+        <div class="chip type"></div>
+      </div>
+      <div class="muted desc"></div>
+      <div class="meta">
+        <span class="chip cat"></span>
+        <span class="chip qty"></span>
+        <span class="chip exp"></span>
+        <span class="chip dist"></span>
+      </div>
+      <div class="row right">
+        <button class="btn reserve">Reservar</button>
+      </div>
+    </div>
+  </template>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>
