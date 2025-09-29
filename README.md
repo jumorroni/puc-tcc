@@ -1,4 +1,4 @@
-# TCC - Fechamento do curso
+# TCC - Fechamento do curso PUCRS
    ## Desenvolvimento de solução tecnológica
 
 # Sistema para Conscientização e Descarte Correto de Alimentos
@@ -6,9 +6,7 @@
    ### 📝 Resumo da Ideia
 
    **Resumo:**  
-   Esta plataforma visa unir diferentes atores da cadeia alimentar, promovendo o consumo consciente e o reaproveitamento, tornando o combate ao desperdício de alimentos mais colaborativo e eficiente.
-
-    🍎🤝👨‍🌾🌱
+   Esta plataforma visa unir diferentes atores da cadeia alimentar, promovendo o consumo consciente e o reaproveitamento, tornando o combate ao desperdício de alimentos mais colaborativo e eficiente. 🍎🤝👨‍🌾🌱
 
    Este projeto é um sistema que conecta três principais perfis: quem compra (e pode desperdiçar), quem vende (e descarta grandes volumes) e quem recebe (através de doações ou aproveitamento de restos). O objetivo é criar um ciclo de **conscientização, reaproveitamento** e **redução do desperdício de alimentos**.
 
