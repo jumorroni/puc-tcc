@@ -20,7 +20,8 @@
    ### O que será desenvolvido?
    O sistema visa classificar alimentos por meio de imagens e data de validade e identificar potenciais usuários interessados nos alimentos. Em um único aplicativo, o usuário pode doar, pedir doação de alimentos e ver suas estatísticas de desperdício e sustentabilidade.
 
-![Logo](/images/logo.png)
+![Logo](/images/logo1.png)
+![Logo](/images/logo2.png)
 
 
 ### Contents:
@@ -85,15 +86,15 @@ Resolver o problema do desperdício de alimentos e incentivar o consumo conscien
 
   No perfil será demonstrado pontos de coleta mais próximos a região cadastrada com possíveis alimentos a serem retirados ou pontos de coleta para doações. Como o cenário apresenta diferentes modalidades, foi necessário identificar personas para cada tipo de usuário para facilitar o processo. São elas:
 
-      ##### 👥 Personas
+      👥 Personas
 
-      - **Consumidor:**  
+      - Consumidor:  
       Busca dicas de consumo responsável e opções para doar pequenos volumes de alimentos.
 
-      - **Comerciante:**  
+      - Comerciante: 
       Necessita cadastrar alimentos prestes a vencer, ofertando doações para evitar o descarte.
 
-      - **Receptor:**  
+      - Receptor: 
       Recebe notificações sobre alimentos disponíveis e pode buscar ou agendar a coleta de doações.
 
 
@@ -120,11 +121,7 @@ Ao fazer login, agora você pode adicionar alimentos, fazer pedidos, ver seus pe
 
 As imagens abaixo mostram os protótipos das telas e suas funcionalidades:
 
-![screens1](/images/telas5.png)
-![screens2](/images/telas2.png)
-![screens3](/images/telas3.png)
-
-
+![screens1](/images/TodasTelas.png)
 
 ### Arquitetura
 ![Architecture](/images/architecture.png)
@@ -134,13 +131,6 @@ As imagens abaixo mostram os protótipos das telas e suas funcionalidades:
 3) O NodeRed recebe os dados e os envia para uma nuvem privada
 4) A imagem é enviada para um modelo criado com Reconhecimento Visual e Watson Studio para ser classificada em consumo, ração animal e fertilizante. Em seguida, os dados serão armazenados no Cloud Object Storage.
 5) O modelo de Aprendizado de Máquina preverá um potencial interesse no alimento e enviará a notificação para contribuir com a correspondência.
-
-### Tecnologia
-
-Implementamos o sistema em javascript, html e css, pois é uma linguagem muito versátil e permite o uso do mesmo código para aplicativos iOS, Android e Web. Assim, se necessário, podemos escalar o aplicativo facilmente.
-Planejamos usar o modelo de aprendizado de máquina de duas maneiras:
-- Com o Watson Visual Recognition e o Watson Studio, o aplicativo pode classificar imagens em consumo, ração animal e fertilizantes. Facilitando a experiência do usuário e melhorando a precisão da solução.
-- Com o Watson Machine Learning, o aplicativo pode prever potenciais interessados ​​no alimento, permitindo o aumento de correspondências e a redução do desperdício.
 
 
 
