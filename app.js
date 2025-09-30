@@ -1,9 +1,8 @@
 // ===== Estado global / utilidades =====
 require('dotenv').config()
-const mongodb = require('mongodb')
-const mongodb = require('mysql')
+const mysql = require('mysql');
 const express = require('express')
-const port = process.env.PORT
+const port = process.env.PORT || 3001
 const app = express()
 
 app.get('/', (re, res) => {
@@ -14,7 +13,7 @@ app.listen(port, () => {
   console.log(`start listening ${port}`)
 })
 
-const myqlConfig = {
+const config = {
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
@@ -22,6 +21,16 @@ const myqlConfig = {
 };
 
 const connection = mysql.createConnection(config);
+
+app.get('/data', (req, res) => {
+    connection.query(
+      "SELECT * FROM user", 
+      (error, results, fields) => {
+        if (error) throw error;
+        res.json(results);
+      }
+    )
+});
 
 // const $ = (sel, el = document) => el.querySelector(sel);
 // const $$ = (sel, el = document) => Array.from(el.querySelectorAll(sel));
