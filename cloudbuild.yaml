@@ -1,0 +1,34 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker' 
+    args: 
+      [
+        'build',
+        't',
+        'gcr.io/$PROJECT_ID/TCC-PUC:$SHORT_SHA',
+        '.'
+      ]
+  - name: gcr.io/cloud-builders/docker' 
+    args: 
+      [
+        'push',
+        '-t',
+        'gcr.io/$PROJECT_ID/TCC-PUC:$SHORT_SHA',
+        '.'
+      ]
+  - name: 'gcr.io/cloud-builders/docker' 
+    args: 
+      [
+        'run',
+        'deploy',
+        'TCC-PUC',
+        '--image',
+        'gcr.io/$PROJECT_ID/TCC-PUC:$SHORT_SHA',
+        '--region',
+        'us-south1',
+        '--plataform',
+        'managed',
+        '--allow-unauthenticated',
+      ]
+    entrypoint: gcloud
+
+images: ['gcr.io/$PROJECT_ID/TCC-PUC']
