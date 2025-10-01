@@ -3,7 +3,7 @@ steps:
     args: 
       [
         'build',
-        't',
+        '-t',
         'gcr.io/$PROJECT_ID/puc-tcc-stagging:$SHORT_SHA',
         '.'
       ]
