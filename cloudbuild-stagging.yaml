@@ -25,7 +25,7 @@ steps:
         'gcr.io/$PROJECT_ID/puc-tcc-stagging:$SHORT_SHA',
         '--region',
         'us-south1',
-        '--plataform',
+        '--platform',
         'managed',
         '--allow-unauthenticated',
       ]
