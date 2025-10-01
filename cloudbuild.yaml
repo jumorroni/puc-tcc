@@ -4,7 +4,7 @@ steps:
       [
         'build',
         '-t',
-        'gcr.io/$PROJECT_ID/puc-tcc:$SHORT_SHA',
+        'gcr.io/$PROJECT_ID/puc-tcc-main:$SHORT_SHA',
         '.'
       ]
       
@@ -12,7 +12,7 @@ steps:
     args: 
       [
         'push',
-        'gcr.io/$PROJECT_ID/puc-tcc:$SHORT_SHA',
+        'gcr.io/$PROJECT_ID/puc-tcc-main:$SHORT_SHA',
       ]
 
   - name: 'gcr.io/cloud-builders/gcloud' 
@@ -20,9 +20,9 @@ steps:
       [
         'run',
         'deploy',
-        'puc-tcc',
+        'puc-tcc-main',
         '--image',
-        'gcr.io/$PROJECT_ID/puc-tcc:$SHORT_SHA',
+        'gcr.io/$PROJECT_ID/puc-tcc-main:$SHORT_SHA',
         '--region',
         'us-south1',
         '--platform',
@@ -34,4 +34,4 @@ steps:
 options:
   logging: CLOUD_LOGGING_ONLY
 
-images: ['gcr.io/$PROJECT_ID/puc-tcc']
+images: ['gcr.io/$PROJECT_ID/puc-tcc-main']
