@@ -7,14 +7,14 @@ steps:
         'gcr.io/$PROJECT_ID/TCC-PUC-stagging:$SHORT_SHA',
         '.'
       ]
+      
   - name: 'gcr.io/cloud-builders/docker' 
     args: 
       [
         'push',
-        '-t',
         'gcr.io/$PROJECT_ID/TCC-PUC-stagging:$SHORT_SHA',
-        '.'
       ]
+
   - name: 'gcr.io/cloud-builders/docker' 
     args: 
       [
