@@ -2,7 +2,6 @@
 FROM node:alpine
 
 # Create an application directory
-
 # Set the /app directory
 WORKDIR /user/app
 
